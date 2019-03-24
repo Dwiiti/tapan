@@ -1,0 +1,118 @@
+1.git mrg n rebase
+https://dev.to/neshaz/git-merge-vs-git-rebase-5134
+2.what is docker file n its works
+A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession. This page describes the commands you can use in a Dockerfile .
+3.what are the ansible tasks
+Ansible - Roles. Roles provide a framework for fully independent, or interdependent collections of variables, tasks, files, templates, and modules.
+https://www.google.com/search?client=firefox-b-ab&ei=HguXXP3cJMXSvwSYqoCAAw&q=what+are+the+ansible+tasks&oq=what+are+the+ansible+&gs_l=psy-ab.1.0.0l2j0i22i30l8.54479.60636..62156...0.0..0.184.2464.0j16....3..0....1..gws-wiz.......0i71.foi1u_gokX0
+4.what is docker volume?
+Volumes are the preferred way to persist data in Docker containers and services. Some use cases for volumes include: Sharing data among multiple running containers. If you don't explicitly create it, a volume is created the first time it is mounted into a container.
+5.Work with Ansible module
+https://docs.ansible.com/ansible/latest/user_guide/modules.html
+WIPRO
+1.whta is DevOps?
+DevOps (development and operations) is an enterprise software development phrase used to mean a type of agile relationship between development and IT operations. The goal of DevOps is to change and improve the relationship by advocating better communication and collaboration between these two business units.
+2.whay do we need a DevOps?
+Increased efficiency helps to speed the development process and make it less prone to error. There are ways to automate DevOps tasks. Continuous integration servers automate the process of testing code, reducing the amount of manual work required. ... As a result, testing and deployment operations speed up.
+5.How do u configure ansible in jenkins?
+https://www.softwaretestinghelp.com/ansible-roles-jenkins-integration-ec2-modules/
+6.deffrence between ant maven
+1) One major difference between Maven and ANT is that Maven requires less configuration than ANT because it works on principle of Convention over configuration and assumes reasonable default e.g. java source file in ${basedir}/src/main/java, resources on ${basedir}/src/main/resources, JUnit test cases on ${basedir}/src/test/java etc. It also creates Java class files on ${basedir}/target/classes and JAR file on ${basedir}/target directory. On the other hand ANT requires all these directories supplied as configuration, usually in ANT build file e.g. build.xml.
+
+
+2) Another significant difference between Maven and ANT is dependency Management. Maven introduced concept of repository, which is a central place to store all libraries, JARs etc. Maven allows you to use central maven repository as well as local repository and automatically download dependency during build process. While ANT based project generally use ${lib} as directory to store dependencies. Changing and updating dependency is much easier in maven than ANT because you don't need to manually download dependency. Having an organization wide central repository also helps to remove redundancy across different projects.
+
+
+3) Third and most important difference between Maven and ANT is that, Maven offers a consistent and common interface to build Java projects. All you need to do is download the project and run mvn install to build it. Also by knowing maven conventions and looking at pom.xml, one can easily understand where source files are and what are project dependencies.
+
+
+4) Another technical difference between ANT and Maven is that ANT task doesn't have any lifecycle, you need to define targets and there dependencies. While Maven has lifecycle, which is invoked when you run commands like mvn install. Maven executes a series of steps as a result of this command to produce artifacts e.g. JAR file, which is end of life cycle.
+
+
+5) Maven also enforce a standard naming convention for artifacts defined using groupId, artifactId and version. Also one more difference between ANT and Maven is that, Maven is more than just a build tool, it act as project management tool and can generate reports etc, Though I have yet to use this feature.
+
+Read more: https://javarevisited.blogspot.com/2015/01/difference-between-maven-ant-jenkins-and-hudson.html#ixzz5j49K7vhN
+7.Git work flow
+https://www.atlassian.com/git/tutorials/comparing-workflows
+8.Maven life cycle
+Phase 	                Handles 	                                Description
+prepare-resources   resource copying 	        Resource copying can be customized in this phase.
+validate 	    Validating the information 	Validates if the project is correct and if all necessary information is available.
+compile 	    compilation 	                Source code compilation is done in this phase.
+Test 	            Testing 	                        Tests the compiled source code suitable for testing framework.
+package 	    packaging 	                This phase creates the JAR/WAR package as mentioned in the packaging in POM.xml.
+install 	    installation 	                This phase installs the package in local/remote maven repository.
+Deploy 	            Deploying 	                        Copies the final package to the remote repository.
+9.where do u find error in jenkins
+https://wiki.jenkins.io/display/JENKINS/Build+Failure+Analyzer
+10.intigrate sonar in jenkins
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwiyhP_PjprhAhVFQo8KHaQHDKwQFjABegQIDBAK&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Djh7utASgKj4&usg=AOvVaw2XP-umU6ktJ0uYE19_ZqwS
+GWL
+1.how do u configure s3 bucket
+
+    Sign in to the preview version of the AWS Management Console.
+
+    Under Storage & Content Delivery, choose S3 to open the Amazon S3 console. ...
+
+    From the Amazon S3 console dashboard, choose Create Bucket.
+
+    In Create a Bucket, type a bucket name in Bucket Name. ...
+
+    In Region, choose Oregon.
+
+    Choose Create.
+2.git init
+The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
+3.git clone
+git clone is a Git command line utility which is used to target an existing repository and create a clone, or copy of the target repository. ... Cloning a local or remote repository. Cloning a bare repository.
+4.recover deleted file in git
+    $ git checkout -- <file> You can get a list of all the deleted files in the working tree using the command below.
+    $ git ls-files --deleted. ...
+    $ git rev-list -n 1 HEAD -- <file>
+    $ git checkout <commit>^ -- <file>
+ans
+if the deletion has not been committed, the command below will restore the deleted file in the working tree.
+$ git checkout -- <file>
+
+You can get a list of all the deleted files in the working tree using the command below.
+$ git ls-files --deleted
+
+
+If the deletion has been committed, find the commit where it happened, then recover the file from this commit.
+$ git rev-list -n 1 HEAD -- <file>
+$ git checkout <commit>^ -- <file>
+
+In case you are looking for the path of the file to recover, the following command will display a summary of all deleted files.
+$ git log --diff-filter=D --summary
+6.what is ci cd
+https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html
+7.perpose of docker
+Purpose of Docker: Its primary focus is to automate the deployment of applications inside software containers and the automation of operating system level virtualization on Linux. It's more lightweight than standard Containers and boots up in seconds.
+8.find jenkins log file
+    locate jenkins service file : /etc/default/jenkins: location for most of the Linux distributions. /etc/sysconfig/jenkins: location for RedHat/CentOS distribution.
+    Open it and probably you will see : NAME=jenkins. JENKINS_LOG=/var/log/$NAME/$NAME.log. So your file /var/log/jenkins/jenkins.log must be exist.
+
+9.by using ansible how to deployee in jenkins
+https://www.redhat.com/en/blog/integrating-ansible-jenkins-cicd-process
+10. what is the use of ansible
+Ansible is an open source automation platform. ... Ansible can help you with configuration management, application deployment, task automation. It can also do IT orchestration, where you have to run tasks in sequence and create a chain of events which must happen on several different servers or devices.
+11.config manegenent
+Configuration management (CM) is a governance and systems engineering process for ensuring consistency among physical and logical assets in an operational environment.
+
+Capgemin
+1.what is public key and private key
+Private/Secret key:
+1. Private key is faster compared to public key
+2. Private key is symmetrical . Actually there is only one key. the other is a copy of it.
+3. Private key is truly private .Should be available with only the two communicating parties.
+4. The two parties must have met before at least once to share the key.
+
+Public key:
+1. Relatively slow to encrypt/decrypt
+2. Asymmetrical
+3. Public key can be made public. Private key is truly secret.
+4. The two parties need not have met . The two may be strangers, half way around the globe.
+
+2.script dly done
+https://www.cyberciti.biz/faq/linux-unix-sleep-bash-scripting/
+3.
